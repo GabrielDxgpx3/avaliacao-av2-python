@@ -8,14 +8,16 @@ class Aluno:
 		self.crud = Crud()
 		self.entrada = Entrada()
 		self.tela = Tela()
-
 		self.tabela = "aluno"
+		self.idsValidos = []
 
 	def novoAluno(self, nome, ra):
 		return self.crud.create(self.tabela).fields(["nome", "ra"]).values([nome, ra]).executar()
 
 	def selectAlunos(self):
-		return self.crud.select(["id", "nome", "ra"]).de(self.tabela).executar()
+		alunos = self.crud.select(["id", "nome", "ra"]).de(self.tabela).executar()
+		self.salvarIdsValidos(alunos)
+		return alunos
 
 	def deletarAluno(self, idAluno):
 		return self.crud.delete().de(self.tabela).onde("id").igualA(str(idAluno)).executar()
@@ -33,7 +35,17 @@ class Aluno:
 			print(self.formatarAluno(aluno))
 			tela.linha()
 
-		
+	def salvarIdsValidos(self, alunos):
+		self.idsValidos = []
+
+		for aluno in alunos:
+			self.idsValidos.append(aluno['id'])
+
+		print(self.idsValidos)
+
+	def ehIdValido(self, idAluno):
+		return idAluno in self.idsValidos
+
 	def formatarAluno(self, aluno):
 		return "{} - {}, {}".format(aluno['id'], aluno['nome'], aluno['ra'])
 

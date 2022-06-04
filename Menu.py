@@ -6,10 +6,9 @@ from time import sleep
 class Menu:
 
 	def __init__(self):
-		self.OPC_LIVROS = 1
-		self.OPC_ALUNOS = 2
-		self.OPC_SOBRE = 3
-		self.OPC_SAIR = 4
+		self.OPC_ALUNOS = 1
+		self.OPC_SOBRE = 2
+		self.OPC_SAIR = 3
 
 		self.OPC_CADASTRAR_ALUNO = 1
 		self.OPC_LISTAR_ALUNOS = 2
@@ -28,9 +27,7 @@ class Menu:
 		while True:
 			opcao_escolhida = self.entrada.lerOpcaoMenu()
 
-			if opcao_escolhida == self.OPC_LIVROS:
-				self.menuLivros()
-			elif opcao_escolhida == self.OPC_ALUNOS:
+			if opcao_escolhida == self.OPC_ALUNOS:
 				self.menuAlunos()
 			elif opcao_escolhida == self.OPC_SOBRE:
 				self.menuSobre()
@@ -82,7 +79,13 @@ class Menu:
 		self.aluno.listarAlunos()
 
 		while True:
-			self.aluno.processarAtualizacao(self.entrada.lerIdAluno('para atualizar'))
+			idAluno = self.entrada.lerIdAluno('para atualizar')
+
+			if not self.aluno.ehIdValido(idAluno):
+				self.tela.idAlunoInexistente()
+				continue
+
+			self.aluno.processarAtualizacao(idAluno)
 			sleep(1)
 			self.tela.limpar()
 			self.tela.alunos()
@@ -93,15 +96,17 @@ class Menu:
 		self.aluno.listarAlunos()
 
 		while True:
-			self.aluno.processarExclusao(self.entrada.lerIdAluno('para excluir'))
+			idAluno = self.entrada.lerIdAluno('para excluir')
+
+			if not self.aluno.ehIdValido(idAluno):
+				self.tela.idAlunoInexistente()
+				continue
+
+			self.aluno.processarExclusao(idAluno)
 			sleep(1)
 			self.tela.limpar()
 			self.tela.alunos()
 			break;
-
-
-	def menuLivros(self):
-		print("menu livros")
 
 	def menuSobre(self):
 		self.tela.sobre()

@@ -8,7 +8,7 @@ class Tela:
 	def home(self):
 		print("===================================================")
 		print("|                                                 |")
-		print("|               BIBLIOTECA UNIRUY                 |")
+		print("|               MATRÍCULA UNIRUY 22.2             |")
 		print("|                                                 |")
 		print("===================================================")
 
@@ -18,22 +18,21 @@ class Tela:
 		print("|                                                 |")
 		print("|         *  digite o número da opção *           |")
 		print("|                                                 |")
-		print("| 1 - Livros                                      |")
-		print("| 2 - Alunos                                      |")
-		print("| 3 - Sobre                                       |")
-		print("| 4 - Sair                                        |")
+		print("| 1 - Sala de Matrícula                           |")
+		print("| 2 - Sobre                                       |")
+		print("| 3 - Sair                                        |")
 		print("|                                                 |")
 		print("===================================================")
 
 	def alunos(self):
 		self.limpar()
-		print("===================== ALUNOS ======================")
+		print("=============== SALA DE MATRÍCULA =================")
 		print("|                                                 |")
 		print("|         *  digite o número da opção *           |")
 		print("|                                                 |")
-		print("| 1 - Cadastrar aluno                             |")
-		print("| 2 - Listar alunos                               |")
-		print("| 3 - Atualizar aluno                             |")
+		print("| 1 - Matricular aluno                            |")
+		print("| 2 - Listar alunos matriculados                  |")
+		print("| 3 - Atualizar cadastro do aluno                 |")
 		print("| 4 - Excluir aluno                               |")
 		print("| 5 - Voltar                                      |")
 		print("|                                                 |")
@@ -41,13 +40,13 @@ class Tela:
 
 	def listarAlunos(self):
 		self.limpar()
-		print("=============== LISTA DE ALUNOS ===================")
+		print("========== LISTA DE ALUNOS MATRICULADOS ===========")
 		print("|                                                 |")
 		print("===================================================")
 
 	def cadastroAluno(self):
 		self.limpar()
-		print("============== CADASTRO DE ALUNO ==================")
+		print("============= MATRÍCULA DE ALUNO ==================")
 		print("|                                                 |")
 		print("===================================================")
 
@@ -68,7 +67,7 @@ class Tela:
 		print("====================== SOBRE ======================")
 		print("|                                                 |")
 		print("| Projeto desenvolvido para a AV2 da disciplina   |")
-		print("| paradigmas de linguagens de programação.        |")
+		print("| paradigmas de linguagem de programação.         |")
 		print("|                                                 |")
 		print("| Discente: Gabriel Alves Nunes Dos Santos        |")
 		print("| RA: 201951143108                                |")
@@ -116,3 +115,6 @@ class Tela:
 
 	def sucessoExcluirAluno(self):
 		print("Aluno excluído com sucesso!")
+
+	def idAlunoInexistente(self):
+		print("Atenção! O ID digitado não é válido!")
