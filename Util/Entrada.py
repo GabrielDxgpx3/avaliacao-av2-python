@@ -15,6 +15,8 @@ class Entrada:
 		except Exception as e:
 			pass
 
+	def lerIntSemTry(self, texto):
+		return int(input(texto))
 
 	def lerOpcaoMenu(self):
 		return self.lerInt("Digite o número da opção: ")
@@ -26,7 +28,7 @@ class Entrada:
 		return self.ler("Digite o nome do aluno: ")
 	
 	def lerRa(self):
-		return self.lerInt("Digite o RA do aluno: ")
+		return self.lerIntSemTry("Digite o RA do aluno: ")
 
 	def lerId(self, sufix):
 		return self.lerInt("Digite o ID do aluno {}: ".format(sufix))

@@ -81,7 +81,7 @@ class Tela:
 
 	def sair(self):
 		self.limpar()
-		print("Até mais.")
+		print("Tchau!")
 
 	def limpar(self):
 		os.system('cls' if os.name == 'nt' else 'clear')
