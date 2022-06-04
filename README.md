@@ -1,4 +1,4 @@
-# AV2 - PARADIGMAS DE LINGUAGEM DE PROGRAMAÇÃO - UNIRUY  
+# AV2 - PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO - UNIRUY  
 
 
 ## Instalação
@@ -17,8 +17,8 @@ Para executar o script digite:
 
 Projeto desenvolvido para a AV2 da disciplina paradigmas de linguagens de programação. 
 
- Discente: Gabriel Alves Nunes Dos Santos
- RA: 201951143108                           
+Discente: Gabriel Alves Nunes Dos Santos
+RA: 201951143108                           
 Docente: Heleno Cardoso Filho   
 
 
