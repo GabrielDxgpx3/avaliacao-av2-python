@@ -5,7 +5,7 @@
 Para executar corretamente o script siga os passos as seguir:
 
 - 1 Baixe o zip do repositório.
-- 2 Instale o pip [veja como fazer clicando aqui](https://docs.python.org/3/installing/index.html)
+- 2 Instale o pip [veja como fazer clicando aqui](https://pip.pypa.io/en/stable/installation/)
 - 3 Execute o comando abaixo para instalar a library de conexão com o banco de dados.
    > `pip install mysql-connector-python`
 
