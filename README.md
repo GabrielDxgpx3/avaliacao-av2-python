@@ -1,11 +1,11 @@
-# AV2 - PARADIGMAS DE LINGUAGEM DE PROGRAMAÇÃO - UNIRUY  
+# AV2 - PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO - UNIRUY  
 
 
 ## Instalação
 Para executar corretamente o script siga os passos as seguir:
 
 - 1 Baixe o zip do repositório.
-- 2 Instale o pip [veja como fazer clicando aqui](https://docs.python.org/3/installing/index.html)
+- 2 Instale o pip [veja como fazer clicando aqui](https://pip.pypa.io/en/stable/installation/)
 - 3 Execute o comando abaixo para instalar a library de conexão com o banco de dados.
    > `pip install mysql-connector-python`
 
@@ -17,8 +17,8 @@ Para executar o script digite:
 
 Projeto desenvolvido para a AV2 da disciplina paradigmas de linguagens de programação. 
 
- Discente: Gabriel Alves Nunes Dos Santos
- RA: 201951143108                           
+Discente: Gabriel Alves Nunes Dos Santos
+RA: 201951143108                           
 Docente: Heleno Cardoso Filho   
 
 
