@@ -2,8 +2,8 @@ import mysql.connector
 
 class ConnectMySQL:
 	usuario = "gabriel"
-	senha = "@9d2L03b$d80a47477ff46c7"
-	host = "144.22.131.184"
+	senha ="####"
+	host = "####"
 	database = "prova_uniruy"
 
 	def __init__(self):
